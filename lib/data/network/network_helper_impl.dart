@@ -178,13 +178,6 @@ class NetworkHelperImpl extends NetworkHelper {
     try {
       headers ??= <String, String>{};
       headers['Content-Type'] = 'application/json';
-      if (url != NetworkEndPoints.signIn ||
-          url != NetworkEndPoints.verifyOtp ||
-          url != NetworkEndPoints.forgotPassword) {
-        headers['Authorization'] = storageRepo.getString(
-          key: StorageKey.token,
-        );
-      }
     } catch (e) {
       debugPrint(e.toString());
     }
