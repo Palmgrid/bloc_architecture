@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: MaterialApp(
-        title: 'In The Middle',
+        title: 'Bloc Architecture',
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         onGenerateRoute: (settings) => AppRoutes.generateRoute(settings),
